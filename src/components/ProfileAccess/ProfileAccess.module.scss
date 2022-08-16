@@ -4,23 +4,6 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;      
-  // background-color: orange;
-
-  .user{
-    flex-shrink: 0;
-    width: 35px;
-    height: 35px;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    border: solid 3px rgb(var(--light-color), 40%);
-
-    svg{
-      color: rgb(var(--light-color));
-    }
-  }
 
   p{
     font-size: 0.8rem;

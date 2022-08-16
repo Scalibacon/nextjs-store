@@ -16,6 +16,7 @@ const Header = () => {
           <Image
             src={LogoImg}
             layout='responsive'
+            priority={true}
           />
         </div>
         <SearchInput/>
