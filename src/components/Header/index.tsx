@@ -3,6 +3,8 @@ import HamburgerMenu from '../HamburgerMenu';
 import Image from 'next/image';
 import LogoImg from '../../assets/logo.png';
 import SearchInput from '../SearchInput';
+import { FaUserAlt } from 'react-icons/fa';
+import ProfileAccess from '../ProfileAccess';
 
 const Header = () => {
   return(
@@ -16,7 +18,9 @@ const Header = () => {
           />
         </div>
         <SearchInput/>
-        <div className={styles.accessContainer}></div>
+
+        <ProfileAccess/>
+
         <div className={styles.iconsContainer}></div>
       </main>
       <section className={styles.navContainer}>
