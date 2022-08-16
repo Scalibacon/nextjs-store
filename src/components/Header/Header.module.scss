@@ -18,18 +18,14 @@ $header-children-width: clamp(400px, 100%, 1500px);
     display: flex;
     align-items: center;
     gap: 1.7rem;
-    background-color: rgb(var(--white), 10%);
+    // background-color: rgb(var(--white), 10%);
 
     .logo{
-      width: 200px;
-      height: 60px;
-      background-color: white;
-    }
-    .searchContainer{
-      width: 650px;
-      height: 37px;
-      background-color: white;
-    }
+      width: 150px;
+      height: 75px;
+      position: relative;
+      // background-color: white;
+    }    
     .accessContainer{
       width: 150px;
       height: 60px;
