@@ -3,8 +3,9 @@ import HamburgerMenu from '../HamburgerMenu';
 import Image from 'next/image';
 import LogoImg from '../../assets/logo.png';
 import SearchInput from '../SearchInput';
-import { FaUserAlt } from 'react-icons/fa';
 import ProfileAccess from '../ProfileAccess';
+import { BsFillChatSquareQuoteFill, BsFillHeartFill } from 'react-icons/bs';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Header = () => {
   return(
@@ -21,7 +22,11 @@ const Header = () => {
 
         <ProfileAccess/>
 
-        <div className={styles.iconsContainer}></div>
+        <div className={styles.iconsContainer}>
+          <a><BsFillChatSquareQuoteFill size={25}/></a>
+          <a><BsFillHeartFill size={25}/></a>
+          <a><FaShoppingCart size={25}/></a>
+        </div>
       </main>
       <section className={styles.navContainer}>
         <nav></nav>
