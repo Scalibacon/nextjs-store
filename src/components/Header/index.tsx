@@ -7,11 +7,23 @@ import ProfileAccess from '../ProfileAccess';
 import { BsFillChatSquareQuoteFill, BsFillHeartFill } from 'react-icons/bs';
 import { MdOutlineArrowBackIosNew } from 'react-icons/md';
 import { FaShoppingCart } from 'react-icons/fa';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Category from '../../types/category';
+import http from '../../config/http';
 
 const Header = () => {
   const [categories, setCategories] = useState<Category[]>([]);
+
+  useEffect( () => {
+    async function fetchCategories(){
+      const response = await http.get('/category');
+      const categories = response.data.categories as Category[];
+      
+      setCategories( oldArray => categories);
+    }
+    
+    fetchCategories();
+  }, []);
 
   return(
     <header className={styles.header}>
@@ -40,11 +52,11 @@ const Header = () => {
             TODAS AS CATEGORIAS <MdOutlineArrowBackIosNew size={13}/>
             <section className={styles.dropdownMenu}>
               <ul>
-                <li><a>Categoria 1</a></li>
-                <li><a>Categoria 2</a></li>
-                <li><a>Categoria 3</a></li>
-                <li><a>Categoria 4</a></li>
-                <li><a>Categoria 5</a></li>
+                { categories.map(category => {
+                  return (
+                    <li key={category.id}><a>{ category.name }</a></li>
+                  )
+                }) }                 
               </ul>
             </section>
           </span>
