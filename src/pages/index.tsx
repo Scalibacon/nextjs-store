@@ -7,6 +7,7 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>ScaliLoja</title>
+        <link rel="shortcut icon" href="./favicon.ico" />
       </Head>
 
       <Header/>
