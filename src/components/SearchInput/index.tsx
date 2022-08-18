@@ -1,5 +1,6 @@
 import { SyntheticEvent, useState } from 'react';
 import { MdOutlineDoubleArrow } from 'react-icons/md';
+import { IoMdSearch } from 'react-icons/io';
 import styles from './SearchInput.module.scss';
 
 const SearchInput = () => {
@@ -17,9 +18,12 @@ const SearchInput = () => {
         onChange={e => setSearchText(e.target.value)}
         value={searchText}
       />
-      <button type="submit">
+      <button type="submit" className={`${styles.arrowImage}`}>
         <MdOutlineDoubleArrow size='5rem'/>
-      </button>      
+      </button>     
+      <button type="submit" className={`${styles.searchImage}`}>
+        <IoMdSearch size={25}/>
+      </button> 
     </form>
   )
 }

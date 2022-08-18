@@ -1,7 +1,8 @@
 import styles from './Header.module.scss';
 import HamburgerMenu from '../HamburgerMenu';
 import Image from 'next/image';
-import LogoImg from '../../assets/logo.png';
+import BigLogoImg from '../../assets/logo.png';
+import MiniLogoImg from '../../assets/mini-logo.png';
 import SearchInput from '../SearchInput';
 import ProfileAccess from '../ProfileAccess';
 import { BsFillChatSquareQuoteFill, BsFillHeartFill } from 'react-icons/bs';
@@ -28,10 +29,19 @@ const Header = () => {
   return(
     <header className={styles.header}>
       <main>
-        <HamburgerMenu/>
-        <div className={styles.logo}>
+        <span className={styles.leftHamburger}>
+          <HamburgerMenu/>
+        </span>        
+        <div className={styles.logoBig}>
           <Image
-            src={LogoImg}
+            src={BigLogoImg}
+            layout='responsive'
+            priority={true}
+          />
+        </div>
+        <div className={styles.logoMini}>
+          <Image
+            src={MiniLogoImg}
             layout='responsive'
             priority={true}
           />
@@ -41,10 +51,14 @@ const Header = () => {
         <ProfileAccess/>
 
         <div className={styles.iconsContainer}>
-          <a><BsFillChatSquareQuoteFill size={25}/></a>
-          <a><BsFillHeartFill size={25}/></a>
-          <a><FaShoppingCart size={25}/></a>
+          <a><BsFillChatSquareQuoteFill size={20}/></a>
+          <a><BsFillHeartFill size={20}/></a>
+          <a className={styles.showInSmall}><FaShoppingCart size={20}/></a>
         </div>
+
+        <span className={styles.rightHamburger}>
+          <HamburgerMenu/>
+        </span>
       </main>
       <section className={styles.navContainer}>
         <nav>

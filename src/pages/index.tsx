@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Homepage</title>
+        <title>ScaliLoja</title>
       </Head>
 
       <Header/>

@@ -1,4 +1,6 @@
-$header-children-width: clamp(400px, 100%, 1500px);
+@import '../../global/responsive.scss';
+
+$header-children-width: clamp(200px, 100%, 1500px);
 
 .header{
   width: 100%;
@@ -14,37 +16,74 @@ $header-children-width: clamp(400px, 100%, 1500px);
   main{
     width: $header-children-width;
     height: 112px;
-    padding: 1.5rem 0;
+    padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
     gap: 2rem;
-    // background-color: rgb(var(--white), 10%);
 
-    .logo{
+    @include for-size(smallDesktop){
+      height: 60px;
+      gap: 1rem;
+      padding: 1rem 0.2rem 1rem 1rem;
+
+      .leftHamburger{
+        display: none;
+      }
+    }     
+
+    .logoBig{
       width: 150px;
-      height: 75px;
+      height: 100%;
       position: relative;
-      // background-color: white;
-    }        
+
+      @include for-size(smallDesktop){
+        display: none;
+      }      
+    }   
+    .logoMini{
+      width: 50px;
+      height: 50px;
+      position: relative;
+      display: none;
+
+      @include for-size(smallDesktop){
+        display: block !important;
+      }
+    }
+
     .iconsContainer{
-      width: 170px;
       height: 60px;
       margin-left: auto;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-      gap: 1.1rem;
-      // background-color: orange;
+      gap: 2rem;
 
       a{
         display: flex;
         align-items: center;
         cursor: pointer;
         transition: filter 0.1s linear;
+        opacity: 0.75;
+        font-size: 2rem !important;
 
         &:hover{
           filter: brightness(.9);
         }
+
+        &:not(.showInSmall){
+          @include for-size(smallDesktop){
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rightHamburger{
+      --color: rgba(var(--white), 0.6);
+      display: none;
+      @include for-size(smallDesktop){
+        display: block;
       }
     }
   }
@@ -55,6 +94,10 @@ $header-children-width: clamp(400px, 100%, 1500px);
     align-items: center;
     justify-content: center;
     background-color: rgb(var(--contrast-color));
+
+    @include for-size(smallDesktop){
+      display: none;
+    }
 
     nav{
       width: $header-children-width;

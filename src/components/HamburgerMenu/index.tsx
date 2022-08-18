@@ -51,7 +51,7 @@ const HamburgerMenu = () => {
       </div>
 
       <div className={styles.hamburger} onClick={toggleMenu}>
-        <FiMenu size={37}/>
+        <FiMenu size={33}/>
       </div>
     </>    
   )

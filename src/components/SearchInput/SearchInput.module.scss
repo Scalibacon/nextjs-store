@@ -1,7 +1,9 @@
+@import '../../global/responsive.scss';
+
 .searchContainer{
   flex: 1;
   max-width: 675px;
-  height: 37px;
+  height: 38px;
   position: relative;
   display: flex;
   align-items: center;
@@ -20,10 +22,15 @@
     &:focus{
       border: solid 2px rgb(var(--contrast-color), 50%);
     }
-  }    
+
+    @include for-size(smallDesktop){
+      width: 100%;
+      padding: 0.75rem 1.7rem 0.75rem 0.7rem;
+      font-size: 0.825rem;
+    }
+  }   
   button{
-    position: absolute;
-    right: -25px;
+    position: absolute;    
     width: auto;
     height: auto;
     padding: 0;
@@ -37,8 +44,26 @@
       filter: brightness(1.25);
     }
 
-    svg{        
-      color: rgb(var(--contrast-color));
-    } 
-  }       
+    &.searchImage{
+      right: 2px;
+      display: none;
+      color: rgba(var(--text-dark), 0.66);
+
+      @include for-size(smallDesktop){
+        display: block;
+      }  
+    }
+
+    &.arrowImage{
+      right: -25px;
+
+      @include for-size(smallDesktop){
+        display: none;
+      }    
+  
+      svg{        
+        color: rgb(var(--contrast-color));
+      } 
+    }    
+  }      
 }

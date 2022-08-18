@@ -1,9 +1,15 @@
+@import '../../global/responsive.scss';
+
 .accessContainer{
   max-width: 150px;
   height: 60px;
   display: flex;
   align-items: center;
-  gap: 0.4rem;      
+  gap: 0.4rem;  
+  
+  @include for-size(smallDesktop){
+    display: none;
+  }
 
   p{
     font-size: 0.8rem;
