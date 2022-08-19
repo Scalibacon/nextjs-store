@@ -1,0 +1,31 @@
+@import '../../global/responsive.scss';
+
+.sliderContainer{
+  max-width: 100%;
+  // padding: 0 0rem;
+}
+
+.bannerContainer {
+  width: 100%;
+  max-width: 100% !important;
+  max-height: 335px;
+  background-color: rgb(var(--black));  
+
+  .mini{
+    display: none;
+  }
+
+  img {
+    object-fit: cover !important;
+    // opacity: 0.4;
+  }
+
+  @include for-size(smartphone) {
+    .mini{
+      display: block;
+    }
+    .big{
+      display: none;
+    }
+  }    
+}

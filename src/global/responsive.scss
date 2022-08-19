@@ -9,4 +9,9 @@
       @content;
     }
   }
+  @else if $device == smartphone{
+    @media only screen and (max-width: 500px){
+      @content;
+    }
+  }
 }
