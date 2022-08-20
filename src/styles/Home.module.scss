@@ -1,0 +1,45 @@
+@import '../global/responsive.scss';
+
+.contentContainer{
+  width: clamp(200px, 100%, 1570px);
+  min-height: 200px;
+  margin: 0 auto;
+  margin-top: -7px;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgb(var(--light-color));
+
+  &>header{
+    width: 100%;
+    padding: 1.1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+    font-weight: 800;
+    color: rgb(var(--white));
+    background-color: rgb(var(--contrast-color));
+
+    @include for-size(smartphone){
+      padding: 0.9rem 1.4rem;  
+      
+      span{
+        small{
+          display: none;
+        }
+      }
+    }
+
+    span{
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+
+      p{
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
