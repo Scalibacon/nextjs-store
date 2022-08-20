@@ -12,7 +12,7 @@ body{
   width: 100vw;
   font-family: Poppins, sans-serif;
   overflow-x: hidden;
-  background-color: rgb(1 1 1 / 0.85);
+  background-color: rgb(var(--dark-color));
 }
 a{
   text-decoration: none;
@@ -26,6 +26,10 @@ button{
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.verticalPaddingSlick .slick-track{
+  padding: 0.2rem 0;
 }
 
 :root{

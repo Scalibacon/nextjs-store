@@ -7,7 +7,7 @@ import SlideArrow from '../SlideShow/SlideArrow';
 
 const ProductList = () => {
   return (
-    <section className={styles.productList}>
+    <section className={`${styles.productList} verticalPaddingSlick`}>
       <Slider
         arrows={true}
         infinite={true}
