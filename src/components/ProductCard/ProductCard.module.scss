@@ -16,10 +16,13 @@
     box-shadow: 0 0 16px 1px rgba(var(--dark-color), 0.07);
   }
 
-  @media only screen and (max-width: 975px){
+  @media only screen and (max-width: 755px){
     &.isInsideSlicker{
-      // width: 80%;
-      background: green;
+      max-height: 432px;
+    }
+  } 
+  @media only screen and (max-width: 540px){
+    &.isInsideSlicker{
     }
   } 
 
@@ -139,7 +142,7 @@
       font-size: 1.25rem;
       color: rgb(var(--contrast-color));
     }
-    p{
+    span{
       font-size: 0.75rem;
       opacity: 0.8;
     }

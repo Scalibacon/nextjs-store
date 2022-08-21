@@ -13,9 +13,9 @@ const ProductCard = ({ id, isInsideSlicker }: ProductCardProps) => {
       <header>
         <span className={styles.discount}>
           <p>26%</p>
-          {/* <MdPlayArrow size={16}/> */}
           <svg width="16" viewBox="0 0 16 8">
-            <path d="M0 -3.65575e-06L16 0L8 8L0 -3.65575e-06Z" fill="#fff"></path></svg>
+            <path d="M0 -3.65575e-06L16 0L8 8L0 -3.65575e-06Z" fill="#fff"></path>
+          </svg>
         </span>
         <span className={styles.remaining}>
           <small>RESTAM</small>
@@ -44,7 +44,7 @@ const ProductCard = ({ id, isInsideSlicker }: ProductCardProps) => {
       <p className={styles.price}>
         <small>R$ 4.399,00</small>
         <b>R$ 2.299,99</b>
-        <p>À vista ou no PIX</p>
+        <span>À vista ou no PIX</span>
       </p>
       <footer>
         <button type="button">
