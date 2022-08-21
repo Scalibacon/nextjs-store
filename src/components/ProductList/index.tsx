@@ -38,12 +38,19 @@ const ProductList = () => {
             }
           },
           {
-            breakpoint: 540,
+            breakpoint: 600,
             settings: {
               slidesToShow: 1,
-              centerPadding: "5vw"
+              centerPadding: "7vw"
             }
           },
+          // {
+          //   breakpoint: 540,
+          //   settings: {
+          //     slidesToShow: 1,
+          //     centerPadding: "5vw"
+          //   }
+          // },
         ]}
       >
         <ProductCard id={1} isInsideSlicker={true}/>

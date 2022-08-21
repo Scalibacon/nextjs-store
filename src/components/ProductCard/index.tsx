@@ -33,19 +33,25 @@ const ProductCard = ({ id, isInsideSlicker }: ProductCardProps) => {
           <p>(1234)</p>
         </span>
       </header>
-      <div className={styles.image}>
-        <img 
-          src="https://images2.kabum.com.br/produtos/fotos/254192/notebook-lenovo-ultrafino-ideapad-3i-intel-core-i3-10110u-4gb-ssd-256gb-windows-11-15-6-prata-82bs000jbr_1636555918_m.jpg"        
-        />
-      </div>
-      <p className={styles.name}>
-        Notebook Lenovo Ultrafino IdeaPad 3i Intel Core i3-10110U, 4GB, SSD 256GB, Windows 11, 15.6, Prata - 82BS000JBR
-      </p>
-      <p className={styles.price}>
-        <small>R$ 4.399,00</small>
-        <b>R$ 2.299,99</b>
-        <span>À vista ou no PIX</span>
-      </p>
+      
+      <main className={styles.main}>
+        <div className={styles.image}>
+          <img 
+            src="https://images2.kabum.com.br/produtos/fotos/254192/notebook-lenovo-ultrafino-ideapad-3i-intel-core-i3-10110u-4gb-ssd-256gb-windows-11-15-6-prata-82bs000jbr_1636555918_m.jpg"        
+          />
+        </div>
+        <section>
+          <p className={styles.name}>
+            Notebook Lenovo Ultrafino IdeaPad 3i Intel Core i3-10110U, 4GB, SSD 256GB, Windows 11, 15.6, Prata - 82BS000JBR
+          </p>
+          <p className={styles.price}>
+            <small>R$ 4.399,00</small>
+            <b>R$ 2.299,99</b>
+            <span>À vista ou no PIX</span>
+          </p>
+        </section>        
+      </main>
+      
       <footer>
         <button type="button">
           <FaShoppingCart size={18}/>
