@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import Category from "../../types/category";
+import Category from "../../../types/category";
 
 const CategoryApi = (request: NextApiRequest, response: NextApiResponse) => {
   const categories = [
