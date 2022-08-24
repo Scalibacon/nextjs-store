@@ -95,6 +95,45 @@
   }
   .shoppingSection{
     flex: 1;
-    background-color: deepskyblue;
+
+    &>p{
+      font-size: 0.83rem;
+      color: rgb(var(--text-soft-dark));
+
+      &:first-child{
+        margin-bottom: 0.7rem;
+      }
+    }
+    .stock{
+      color: green;
+    }
+    .oldPrice{
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-decoration: line-through;
+      opacity: 0.8;
+    }
+    .price{
+      display: flex;
+      justify-content: space-between;
+
+      span{
+        flex: 1;
+
+        p{
+          font-size: 2.5rem;
+          line-height: 3rem;
+          font-weight: 800;
+          color: rgb(var(--contrast-color));
+        }   
+        small{
+          color: rgb(var(--text-soft-dark));
+        }     
+      }
+
+      button{
+        font-size: 1.12rem;
+      }
+    }
   }
 }

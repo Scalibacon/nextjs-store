@@ -3,6 +3,7 @@ import styles from '../../styles/Product.module.scss';
 import { FiShare2, FiHeart } from "react-icons/fi";
 import StarRank from "../../components/StarRank";
 import ImagesGallery from "../../components/ImagesGallery";
+import BuyButton from "../../components/BuyButton";
 
 const Product = () => {
   return (
@@ -32,7 +33,22 @@ const Product = () => {
             <ImagesGallery/>
           </section>
 
-          <section className={styles.shoppingSection}>aaa</section>
+          <section className={styles.shoppingSection}>
+            <p>
+              Vendido e entregue por:
+              <b> ScaliLoja </b> 
+              | 
+              <span className={styles.stock}><b> Em estoque</b></span>
+            </p>
+            <p className={styles.oldPrice}>R$ 4.399,00</p>
+            <div className={styles.price}>
+              <span>
+                <p>R$ 2.299,99</p>
+                <small>À vista ou no PIX</small>
+              </span>
+              <BuyButton/>
+            </div>
+          </section>
         </main>
       </section>
     </div>

@@ -157,23 +157,5 @@
     width: 100%;
     height: 37px;
     margin-top: auto;
-
-    button{
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0.25rem;
-      gap: 0.5rem;
-      font-weight: 700;
-      font-size: 0.75rem;
-      color: rgb(var(--white));
-      background-color: rgb(var(--contrast-color));
-
-      &:hover{
-        filter: brightness(0.9);
-      }
-    }
   }
 }

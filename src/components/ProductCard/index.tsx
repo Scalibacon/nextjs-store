@@ -3,6 +3,7 @@ import { AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { FaShoppingCart } from 'react-icons/fa';
 import Link from 'next/link';
 import StarRank from '../StarRank';
+import BuyButton from '../BuyButton';
 
 type ProductCardProps = {
   id: number,
@@ -49,10 +50,7 @@ const ProductCard = ({ id, isInsideSlicker }: ProductCardProps) => {
         </main>
         
         <footer>
-          <button type="button">
-            <FaShoppingCart size={18}/>
-            <p>COMPRAR</p>
-          </button>
+          <BuyButton/>
         </footer>
       </a>
     </Link>    

@@ -4,13 +4,14 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from './ImagesGallery.module.scss';
 
 const ImagesGallery = () => {
-  function createCustomDots(index: number){
-    // chumbado, depois pegar dinamicamente concatenando o id
-    const urls = [
-      "https://images.kabum.com.br/produtos/fotos/154974/samsung-smart-tv-43-uhd-4k-43au7700-processador-crystal-4k-tela-sem-limites-alexa-built-in-controle-unico-un43au7700gxzd_1617624901_gg.jpg",
-      "https://images.kabum.com.br/produtos/fotos/154974/samsung-smart-tv-43-uhd-4k-43au7700-processador-crystal-4k-tela-sem-limites-alexa-built-in-controle-unico-un43au7700gxzd_1628864755_gg.jpg"
-    ]
+  // chumbado, depois pegar dinamicamente concatenando o id
+  const urls = [
+    "https://images.kabum.com.br/produtos/fotos/154974/samsung-smart-tv-43-uhd-4k-43au7700-processador-crystal-4k-tela-sem-limites-alexa-built-in-controle-unico-un43au7700gxzd_1617624901_gg.jpg",
+    "https://images.kabum.com.br/produtos/fotos/154974/samsung-smart-tv-43-uhd-4k-43au7700-processador-crystal-4k-tela-sem-limites-alexa-built-in-controle-unico-un43au7700gxzd_1628864755_gg.jpg",
+    "https://images.kabum.com.br/produtos/fotos/154974/samsung-smart-tv-43-uhd-4k-43au7700-processador-crystal-4k-tela-sem-limites-alexa-built-in-controle-unico-un43au7700gxzd_1617624899_gg.jpg",
+  ];
 
+  function createCustomDots(index: number) {
     return (
       <a>
         <img
@@ -30,18 +31,27 @@ const ImagesGallery = () => {
         speed={0}
         infinite={true}
         customPaging={createCustomDots}
+        responsive={[
+          {
+            breakpoint: 800,
+            settings: {
+              fade: false,
+              speed: 500
+            }
+          },
+        ]}
       >
-        <div className={styles.imageContainer}>
-          <img
-            src="https://images.kabum.com.br/produtos/fotos/154974/samsung-smart-tv-43-uhd-4k-43au7700-processador-crystal-4k-tela-sem-limites-alexa-built-in-controle-unico-un43au7700gxzd_1617624901_gg.jpg"
-          />
-        </div>
-
-        <div className={styles.imageContainer}>
-          <img
-            src="https://images.kabum.com.br/produtos/fotos/154974/samsung-smart-tv-43-uhd-4k-43au7700-processador-crystal-4k-tela-sem-limites-alexa-built-in-controle-unico-un43au7700gxzd_1628864755_gg.jpg"
-          />
-        </div>
+        {urls.map((url, index) => {
+          return (
+            <div className={styles.imageContainer} key={url}>
+              <div className={styles.image}>
+                <img
+                  src={url}
+                />
+              </div>
+            </div>
+          )
+        })}
       </Slider>
     </div>
   )
