@@ -2,6 +2,7 @@ import Header from "../../components/Header";
 import styles from '../../styles/Product.module.scss';
 import { FiShare2, FiHeart } from "react-icons/fi";
 import StarRank from "../../components/StarRank";
+import ImagesGallery from "../../components/ImagesGallery";
 
 const Product = () => {
   return (
@@ -28,9 +29,10 @@ const Product = () => {
                 <FiHeart size={25}/>
               </span>
             </header>
+            <ImagesGallery/>
           </section>
 
-          <section className={styles.shoppingSection}></section>
+          <section className={styles.shoppingSection}>aaa</section>
         </main>
       </section>
     </div>

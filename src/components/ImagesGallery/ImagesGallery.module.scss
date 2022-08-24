@@ -1,0 +1,52 @@
+.galleryContainer{
+  max-width: 100%;
+}
+
+.imageContainer{
+  padding: clamp(37px, 3vw, 50px);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  // background-color: red;
+  @media only screen and (max-width: 800px){
+    padding: 0 0 1rem 0;
+  }
+
+  img{
+    width: 90%;
+  }
+}
+
+.galleryDots{
+  width: 60px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -5px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  overflow: auto;
+
+  @media only screen and (max-width: 800px){
+    position: relative;
+    width: auto;
+    left: auto;
+    flex-direction: row;    
+  } 
+
+  a{
+    height: 55px;    
+    width: 55px;
+    border: solid 1px rgba(var(--dark-color), 0.2);
+    border-radius: 5px;
+    padding: 3px;
+    display: flex;
+
+    img{
+      height: 100%;
+      
+    }
+  }
+}
