@@ -1,6 +1,8 @@
 import Header from "../../components/Header";
 import styles from '../../styles/Product.module.scss';
 import { FiShare2, FiHeart } from "react-icons/fi";
+import { TbDiscount2 } from 'react-icons/tb';
+import { IoMdStopwatch } from "react-icons/io";
 import StarRank from "../../components/StarRank";
 import ImagesGallery from "../../components/ImagesGallery";
 import BuyButton from "../../components/BuyButton";
@@ -34,6 +36,18 @@ const Product = () => {
           </section>
 
           <section className={styles.shoppingSection}>
+            <div className={styles.discountContainer}>
+              <span>
+                <p><TbDiscount2 size={35}/></p>
+                <b>25% OFF</b>
+              </span>
+
+              <span>
+                <p><IoMdStopwatch size={35}/></p>
+                <b>21D 12:50:37</b>
+              </span>
+            </div>
+
             <p>
               Vendido e entregue por:
               <b> ScaliLoja </b> 
@@ -48,6 +62,18 @@ const Product = () => {
               </span>
               <BuyButton/>
             </div>
+            <p>Em até 10x de <b>R$ 229,99</b> sem juros no cartão</p>
+            <p className={styles.paymentPolicy}><a>Ver nossa Política de Pagamento</a></p>
+
+            <div className={styles.consultZipCode}>
+              <h3>Consultar frete e prazo de entrega</h3>
+              <form>
+                <input type="text" placeholder="Digite seu CEP"></input>
+                <button type="submit">OK</button>
+              </form>
+            </div>
+
+            <BuyButton className={styles.buyButtonMobile} iconSize={25}/>
           </section>
         </main>
       </section>

@@ -94,20 +94,25 @@
     }
   }
   .shoppingSection{
+    width: 100%;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    @media only screen and (max-width: 800px){
+      margin-top: 1.3rem;
+    }
 
     &>p{
       font-size: 0.83rem;
-      color: rgb(var(--text-soft-dark));
-
-      &:first-child{
-        margin-bottom: 0.7rem;
-      }
+      color: rgb(var(--text-soft-dark));      
     }
     .stock{
       color: green;
     }
     .oldPrice{
+      margin-bottom: -0.5rem;
       font-size: 0.9rem;
       font-weight: 400;
       text-decoration: line-through;
@@ -116,15 +121,17 @@
     .price{
       display: flex;
       justify-content: space-between;
+      gap: 0.5rem;
 
-      span{
+      &>span{
         flex: 1;
 
         p{
-          font-size: 2.5rem;
+          font-size: clamp(2rem, 4vw, 2.5rem);
           line-height: 3rem;
           font-weight: 800;
           color: rgb(var(--contrast-color));
+          white-space: nowrap;
         }   
         small{
           color: rgb(var(--text-soft-dark));
@@ -133,7 +140,96 @@
 
       button{
         font-size: 1.12rem;
+
+        @media only screen and (max-width: 800px){
+          display: none;
+        }
       }
+    }
+    .paymentPolicy{
+      text-decoration: underline;   
+      margin-bottom: clamp(0.2rem, 2vw, 0.7rem);  
+    }
+  }
+
+  .discountContainer{
+    padding: 1.2rem 1rem;
+    margin-bottom: 1.3rem;
+    display: flex;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: white;
+    border-radius: 4px;
+    background-color: rgb(var(--theme-color));
+
+    @media only screen and (max-width: 800px){
+      font-size: clamp(1.15rem, 5vw, 1.3rem);
+    }
+
+    &>span{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2rem;
+
+      @media only screen and (max-width: 550px){
+        flex-direction: column;
+      }
+
+      &:first-child{
+        border-right: solid 1px white;
+      }     
+
+      p{
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+      }
+    }
+  }
+
+  .consultZipCode{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    h3{
+      font-size: 1rem;
+      color: rgb(var(--text-soft-dark));
+    }
+    form{
+      max-height: 3rem;
+      display: flex;
+      gap: 1rem;
+    }
+    input{
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      font-family: Poppins, sans-serif;
+      border: solid 1px rgba(222, 224, 228, 1);      
+      border-radius: 4px;
+    }
+    button{
+      max-width: 55px;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;      
+      font-size: 1.15rem;   
+      color: rgb(var(--contrast-color));  
+      font-weight: 700;
+      border: solid 1px rgb(var(--contrast-color));
+      border-radius: 4px;
+    }
+  }
+
+  .buyButtonMobile{
+    margin-top: 0.7rem;
+    font-size: 1.12rem;
+    display: none;
+
+    @media only screen and (max-width: 800px){
+      display: flex;
     }
   }
 }
