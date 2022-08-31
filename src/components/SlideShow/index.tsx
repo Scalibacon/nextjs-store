@@ -11,16 +11,16 @@ const SlideShow = () => {
   return (
     <section className={styles.sliderContainer}>
       <Slider
-        // arrows={false}
+        arrows={false}
         infinite={true}
         slidesToShow={1}
         slidesToScroll={1}
         autoplay={true}
-        autoplaySpeed={7000}
+        autoplaySpeed={5500}
         pauseOnHover={true}
         cssEase='ease'
-        prevArrow={<SlideArrow isLeft={true}/>}
-        nextArrow={<SlideArrow isLeft={false}/>}
+        // prevArrow={<SlideArrow isLeft={true}/>}
+        // nextArrow={<SlideArrow isLeft={false}/>}
       >
         <div className={`${styles.bannerContainer}`}>
           <div className={styles.big}>
