@@ -1,0 +1,55 @@
+[
+  {
+    "id": "1",
+    "name": "Placa de Vídeo Zotac Gaming NVIDIA GeForce RTX 2060, 6GB, GDDR6 - ZT-T20600H-10M",
+    "price": 1899.99,
+    "inventory": 5,
+    "category": {
+      "id": 1,
+      "name": "Informática"
+    },
+    "categoryId": 1,
+    "pictures": [
+      {
+        "id": 1,
+        "imagePath": "https://images.kabum.com.br/produtos/fotos/110397/placa-de-video-zotac-gaming-nvidia-geforce-rtx-2060-6gb-gddr6-zt-t20600h-10m_1582213398_gg.jpg",
+        "productId": "1"
+      },
+      {
+        "id": 2,
+        "imagePath": "https://images.kabum.com.br/produtos/fotos/110397/placa-de-video-zotac-gaming-nvidia-geforce-rtx-2060-6gb-gddr6-zt-t20600h-10m_1582213402_gg.jpg",
+        "productId": "2"
+      }
+    ],
+    "description": "Placa de vídeo brabíssima: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor dui quis neque vulputate condimentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed et ornare enim. In at velit sapien. Aenean ut neque at ligula gravida luctus eget ut odio. Integer id dictum metus. Nam ac enim odio. Phasellus at blandit est. Ut gravida leo mi, eu tincidunt massa fermentum ut. Aliquam rutrum vehicula est eget ultricies. Aliquam id risus erat. Nam eu tempus sapien. Aliquam eget dui volutpat, posuere risus vitae, rutrum quam. Aenean porta ligula ac purus fermentum, a faucibus nisi ornare. Sed elementum egestas massa sit amet tristique. Etiam id luctus odio.<br />Vestibulum vel dui at dui pulvinar mollis a in enim. Praesent lacinia convallis faucibus. Ut dictum nunc efficitur, faucibus purus a, rhoncus mi. Praesent auctor molestie suscipit. Ut interdum nunc tellus, a laoreet diam elementum vitae. Phasellus interdum, tortor ultricies mattis ornare, urna arcu sodales dolor, ac ultrices urna orci a magna. Nullam volutpat quis elit sit amet tincidunt. Proin hendrerit lectus sit amet massa interdum, in pharetra tellus imperdiet. Nullam justo leo, porta bibendum egestas ut, eleifend ac leo. Sed ut accumsan augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br />Mauris sodales, massa sed feugiat sollicitudin, nunc elit sagittis risus, in pulvinar dui magna ut massa. Aliquam sit amet erat vel nunc tristique egestas eget in urna. Aenean cursus ut diam quis auctor. Phasellus commodo efficitur nulla eget ornare. Mauris ultrices aliquet erat, et vestibulum lorem sollicitudin non. Proin lacinia imperdiet eros. Nunc convallis sapien ante, eu condimentum sem lacinia vel. Cras malesuada ligula in nunc dapibus malesuada. Sed cursus felis nisi, ac convallis felis hendrerit in. Nam nec neque sed turpis vulputate ultricies.<br />Donec fermentum iaculis neque, convallis vestibulum neque. Nullam ac sollicitudin libero, in interdum lectus. Cras facilisis libero vitae tortor ullamcorper feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nisl sapien, porta sed mauris non, vulputate posuere massa. Proin at mi accumsan, maximus nunc ac, faucibus est. Sed eget nisi dolor. Sed malesuada consectetur scelerisque. Sed consectetur condimentum sagittis. Phasellus mollis non diam nec sollicitudin. Pellentesque leo tellus, congue et ex ut, suscipit hendrerit nisi. Cras ultricies mi sed odio bibendum, sit amet posuere tortor aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+  },
+  {
+    "id": "2",
+    "name": "Samsung Smart TV 43´´ UHD 4K 43AU7700, Processador Crystal 4K, Tela sem limites, Alexa Built In, Controle Único - UN43AU7700GXZD",
+    "price": 2299.99,
+    "inventory": 3,
+    "category": {
+      "id": 2,
+      "name": "Eletrodomésticos"
+    },
+    "categoryId": 2,
+    "pictures": [
+      {
+        "id": 3,
+        "imagePath": "https://images.kabum.com.br/produtos/fotos/154974/samsung-smart-tv-43-uhd-4k-43au7700-processador-crystal-4k-tela-sem-limites-alexa-built-in-controle-unico-un43au7700gxzd_1617624901_gg.jpg",
+        "productId": "2"
+      },
+      {
+        "id": 4,
+        "imagePath": "https://images.kabum.com.br/produtos/fotos/154974/samsung-smart-tv-43-uhd-4k-43au7700-processador-crystal-4k-tela-sem-limites-alexa-built-in-controle-unico-un43au7700gxzd_1628864755_gg.jpg",
+        "productId": "2"
+      },
+      {
+        "id": 5,
+        "imagePath": "https://images.kabum.com.br/produtos/fotos/154974/samsung-smart-tv-43-uhd-4k-43au7700-processador-crystal-4k-tela-sem-limites-alexa-built-in-controle-unico-un43au7700gxzd_1617624899_gg.jpg",
+        "productId": "2"
+      }
+    ],
+    "description": "TV do balacobaco: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tempor dui quis neque vulputate condimentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed et ornare enim. In at velit sapien. Aenean ut neque at ligula gravida luctus eget ut odio. Integer id dictum metus. Nam ac enim odio. Phasellus at blandit est. Ut gravida leo mi, eu tincidunt massa fermentum ut. Aliquam rutrum vehicula est eget ultricies. Aliquam id risus erat. Nam eu tempus sapien. Aliquam eget dui volutpat, posuere risus vitae, rutrum quam. Aenean porta ligula ac purus fermentum, a faucibus nisi ornare. Sed elementum egestas massa sit amet tristique. Etiam id luctus odio.<br />Vestibulum vel dui at dui pulvinar mollis a in enim. Praesent lacinia convallis faucibus. Ut dictum nunc efficitur, faucibus purus a, rhoncus mi. Praesent auctor molestie suscipit. Ut interdum nunc tellus, a laoreet diam elementum vitae. Phasellus interdum, tortor ultricies mattis ornare, urna arcu sodales dolor, ac ultrices urna orci a magna. Nullam volutpat quis elit sit amet tincidunt. Proin hendrerit lectus sit amet massa interdum, in pharetra tellus imperdiet. Nullam justo leo, porta bibendum egestas ut, eleifend ac leo. Sed ut accumsan augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<br />Mauris sodales, massa sed feugiat sollicitudin, nunc elit sagittis risus, in pulvinar dui magna ut massa. Aliquam sit amet erat vel nunc tristique egestas eget in urna. Aenean cursus ut diam quis auctor. Phasellus commodo efficitur nulla eget ornare. Mauris ultrices aliquet erat, et vestibulum lorem sollicitudin non. Proin lacinia imperdiet eros. Nunc convallis sapien ante, eu condimentum sem lacinia vel. Cras malesuada ligula in nunc dapibus malesuada. Sed cursus felis nisi, ac convallis felis hendrerit in. Nam nec neque sed turpis vulputate ultricies.<br />Donec fermentum iaculis neque, convallis vestibulum neque. Nullam ac sollicitudin libero, in interdum lectus. Cras facilisis libero vitae tortor ullamcorper feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nisl sapien, porta sed mauris non, vulputate posuere massa. Proin at mi accumsan, maximus nunc ac, faucibus est. Sed eget nisi dolor. Sed malesuada consectetur scelerisque. Sed consectetur condimentum sagittis. Phasellus mollis non diam nec sollicitudin. Pellentesque leo tellus, congue et ex ut, suscipit hendrerit nisi. Cras ultricies mi sed odio bibendum, sit amet posuere tortor aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+  }
+]

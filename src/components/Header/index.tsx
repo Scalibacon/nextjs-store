@@ -18,7 +18,7 @@ const Header = () => {
 
   useEffect( () => {
     async function fetchCategories(){
-      const response = await http.get('/category/list');
+      const response = await http.get('/category');
       const categories = response.data.categories as Category[];
       
       setCategories( oldArray => categories);

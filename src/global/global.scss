@@ -32,6 +32,9 @@ button{
 .verticalPaddingSlick .slick-track{
   padding: 0.2rem 0;
 }
+.slick-current{
+  z-index: 1;
+}
 
 :root{
   --theme-color: 0, 96, 177;
