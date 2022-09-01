@@ -54,7 +54,7 @@ const ProductList = ({
         ]}
       >
         { products.map( product => (
-          <ProductCard product={product} isInsideSlicker={true}/>
+          <ProductCard product={product} isInsideSlicker={true} key={product.id}/>
         ))}
 
       </Slider>
