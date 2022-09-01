@@ -4,8 +4,15 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from './ProductList.module.scss';
 import ProductCard from '../ProductCard';
 import SlideArrow from '../SlideShow/SlideArrow';
+import Product from '../../types/Product';
 
-const ProductList = () => {
+type ProductListProps = {
+  products: Product[]
+}
+
+const ProductList = ({
+  products
+}: ProductListProps) => {
   return (
     <section className={`${styles.productList} verticalPaddingSlick`}>
       <Slider
@@ -43,23 +50,13 @@ const ProductList = () => {
               slidesToShow: 1,
               centerPadding: "7vw"
             }
-          },
-          // {
-          //   breakpoint: 540,
-          //   settings: {
-          //     slidesToShow: 1,
-          //     centerPadding: "5vw"
-          //   }
-          // },
+          }
         ]}
       >
-        <ProductCard id={1} isInsideSlicker={true}/>
-        <ProductCard id={2} isInsideSlicker={true}/>
-        <ProductCard id={3} isInsideSlicker={true}/>
-        <ProductCard id={4} isInsideSlicker={true}/>
-        <ProductCard id={5} isInsideSlicker={true}/>
-        <ProductCard id={6} isInsideSlicker={true}/>
-        <ProductCard id={7} isInsideSlicker={true}/>
+        { products.map( product => (
+          <ProductCard product={product} isInsideSlicker={true}/>
+        ))}
+
       </Slider>
     </section>
   )

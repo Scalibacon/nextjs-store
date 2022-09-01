@@ -11,6 +11,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import Category from '../../types/category';
 import http from '../../config/http';
+import Link from 'next/link';
 
 const Header = () => {
   const [categories, setCategories] = useState<Category[]>([]);
@@ -31,21 +32,27 @@ const Header = () => {
       <main>
         <span className={styles.leftHamburger}>
           <HamburgerMenu/>
-        </span>        
-        <div className={styles.logoBig}>
-          <Image
-            src={BigLogoImg}
-            layout='responsive'
-            priority={true}
-          />
-        </div>
-        <div className={styles.logoMini}>
-          <Image
-            src={MiniLogoImg}
-            layout='responsive'
-            priority={true}
-          />
-        </div>
+        </span>  
+
+        <Link href="/">
+          <a>
+            <div className={styles.logoBig}>
+              <Image
+                src={BigLogoImg}
+                layout='responsive'
+                priority={true}
+              />
+            </div>
+            <div className={styles.logoMini}>
+              <Image
+                src={MiniLogoImg}
+                layout='responsive'
+                priority={true}
+              />
+            </div>
+          </a>          
+        </Link>      
+        
         <SearchInput/>
 
         <ProfileAccess/>

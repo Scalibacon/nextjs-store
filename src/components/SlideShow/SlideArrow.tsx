@@ -1,5 +1,5 @@
 import { CSSProperties, MouseEventHandler } from 'react';
-import { MdOutlineDoubleArrow } from 'react-icons/md';
+import { MdOutlineDoubleArrow, MdOutlineArrowBackIosNew } from 'react-icons/md';
 import styles from './SlideArrow.module.scss';
 
 type SlideArrowProps = {
@@ -18,7 +18,7 @@ const SlideArrow = (props: SlideArrowProps) => {
       className={`${styles.arrow} ${isLeft ? styles.left : styles.right} ${isInsideSlicker ? styles.isInsideSlicker : ''}`}
       onClick={onClick}
     >
-      <MdOutlineDoubleArrow size={25}/>
+      <MdOutlineArrowBackIosNew size={20}/>
     </div>
   )
 }

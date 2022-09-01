@@ -1,0 +1,23 @@
+.rating{  
+  max-height: 32px;
+  display: flex;  
+  align-items: center;
+  gap: 0.1rem;
+
+  &.textBelow{
+    flex-direction: column;
+    max-width: 60px;
+  }
+
+  span{
+    display: flex;
+    // gap: 0.15rem;
+    color: rgb(var(--contrast-color));
+  }
+  p{
+    width: 100%;
+    font-size: 0.65rem;
+    text-align: right;
+    color: rgb(var(--text-soft-dark));
+  }
+}
