@@ -6,3 +6,5 @@
 
 - Adicionar Progress Bar no _app (nprogress)
 - Estilizar as scrollbars pra não ficarem tão grossas e zoadas
+- Criar página de erro 404 e redirecionar pra ela em alguns casos
+- Documentar um pouco sobre as funções do Next, tipo getStaticProps e Paths
