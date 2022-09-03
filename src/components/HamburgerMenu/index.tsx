@@ -15,6 +15,8 @@ const HamburgerMenu = () => {
 
   const toggleMenu = () => {
     backgroundCover.current?.classList.toggle(styles.active);
+
+    document.body.classList.toggle('disableScroll');
   }
 
   return (

@@ -28,6 +28,9 @@ button{
   outline: none;
   cursor: pointer;
 }
+.disableScroll{
+  overflow: hidden;
+}
 .darkened{
   filter: brightness(0.5);
 }
