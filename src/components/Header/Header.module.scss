@@ -13,6 +13,12 @@ $header-children-width: clamp(200px, 100%, 1500px);
   background-color: rgb(var(--theme-color));
   color: rgb(255 255 255);
 
+  @include for-size(smallDesktop){
+    position: fixed;
+    top: 0;
+    z-index: 7;
+  }
+
   main{
     width: $header-children-width;
     height: 112px;
