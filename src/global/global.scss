@@ -28,6 +28,9 @@ button{
   outline: none;
   cursor: pointer;
 }
+.darkened{
+  filter: brightness(0.5);
+}
 
 .verticalPaddingSlick .slick-track{
   padding: 0.2rem 0;

@@ -13,6 +13,7 @@ import Image2 from '../assets/images/2.jpg';
 import Image from "next/image";
 import Product from "../types/Product";
 import MOCKED_PRODUCTS from '../utils/MOCKED_PRODUCTS.json';
+import Footer from "../components/Footer";
 
 type HomePageProps = {
   productsSale: Product[],
@@ -26,7 +27,7 @@ const Home: NextPage<HomePageProps> = ({
   productsWanted
 }: HomePageProps) => {
   return (
-    <div className={styles.homeWrapper}>
+    <>
       <Head>
         <title>ScaliLoja</title>
         <link rel="shortcut icon" href="./favicon.ico" />
@@ -34,76 +35,81 @@ const Home: NextPage<HomePageProps> = ({
 
       <Header />
 
-      <SlideShow />
+      <section id="pageMain">
+        <SlideShow />
+        <main className={styles.contentContainer}>
+          <header>
+            <span>
+              <BsFillLightningChargeFill size="23" />
+              OFERTAS RELÂMPAGO
+            </span>
+            <span>
+              <small>TERMINA EM:</small>
+              <p>
+                <IoMdStopwatch size="23" />
+                11D 12:50:37
+              </p>
+            </span>
+          </header>
 
-      <main className={styles.contentContainer}>
-        <header>
-          <span>
-            <BsFillLightningChargeFill size="23" />
-            OFERTAS RELÂMPAGO
-          </span>
-          <span>
-            <small>TERMINA EM:</small>
-            <p>
-              <IoMdStopwatch size="23" />
-              11D 12:50:37
-            </p>
-          </span>
-        </header>
-
-        <div className={styles.row}>
-          <ProductList products={productsSale} />
-        </div>
-
-        <a className={styles.seeMore}>
-          VER TODOS
-          <MdKeyboardArrowRight size={23} />
-        </a>
-
-        <section className={styles.imagesContainer}>
-          <div>
-            <Image
-              src={Image1}
-              layout="responsive"
-            />
+          <div className={styles.row}>
+            <ProductList products={productsSale} />
           </div>
 
-          <div>
-            <Image
-              src={Image2}
-              layout="responsive"
-            />
-          </div>
-        </section>
-
-        <div className={styles.sectionTitle}>
-          <BsFillStarFill size={20} />
-          <span>DESTAQUES</span>
-          <a className={`${styles.seeMore} ${styles.insideTitle}`}>
+          <a className={styles.seeMore}>
             VER TODOS
             <MdKeyboardArrowRight size={23} />
           </a>
-        </div>
 
-        <div className={styles.row}>
-          <ProductList products={productsHighlighted} />
-        </div>
+          <section className={styles.imagesContainer}>
+            <div>
+              <Image
+                src={Image1}
+                layout="responsive"
+              />
+            </div>
 
-        <div className={styles.sectionTitle}>
-          <AiOutlineAim size={20} />
-          <span>MAIS PROCURADOS</span>
-          <a className={`${styles.seeMore} ${styles.insideTitle}`}>
-            VER TODOS
-            <MdKeyboardArrowRight size={23} />
-          </a>
-        </div>
+            <div>
+              <Image
+                src={Image2}
+                layout="responsive"
+              />
+            </div>
+          </section>
 
-        <div className={styles.row}>
-          <ProductList products={productsWanted} />
-        </div>
+          <div className={styles.sectionTitle}>
+            <BsFillStarFill size={20} />
+            <span>DESTAQUES</span>
+            <a className={`${styles.seeMore} ${styles.insideTitle}`}>
+              VER TODOS
+              <MdKeyboardArrowRight size={23} />
+            </a>
+          </div>
 
-      </main>
-    </div>
+          <div className={styles.row}>
+            <ProductList products={productsHighlighted} />
+          </div>
+
+          <div className={styles.sectionTitle}>
+            <AiOutlineAim size={20} />
+            <span>MAIS PROCURADOS</span>
+            <a className={`${styles.seeMore} ${styles.insideTitle}`}>
+              VER TODOS
+              <MdKeyboardArrowRight size={23} />
+            </a>
+          </div>
+
+          <div className={styles.row}>
+            <ProductList products={productsWanted} />
+          </div>
+
+        </main>
+      </section>
+
+
+
+      <Footer />
+    </>
   )
 }
 

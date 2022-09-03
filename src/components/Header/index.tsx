@@ -10,7 +10,6 @@ import { MdOutlineArrowBackIosNew } from 'react-icons/md';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
 import Category from '../../types/category';
-import http from '../../config/http';
 import Link from 'next/link';
 
 const Header = () => {
@@ -18,14 +17,25 @@ const Header = () => {
 
   useEffect( () => {
     async function fetchCategories(){
-      const response = await http.get('/category');
-      const categories = response.data.categories as Category[];
+      const response = await fetch('http://localhost:3000/api/category');
+      const { categories }  = await response.json();
       
       setCategories( oldArray => categories);
     }
     
     fetchCategories();
   }, []);
+
+  const toggleDropdownMenu = (show: boolean) => {
+    const pageMain = document.getElementById('pageMain');
+    if(!pageMain) return;
+
+    if(show){
+      pageMain.classList.add('darkened');
+    } else {
+      pageMain.classList.remove('darkened');
+    }
+  }
 
   return(
     <header className={styles.header}>
@@ -69,7 +79,11 @@ const Header = () => {
       </main>
       <section className={styles.navContainer}>
         <nav>
-          <span>
+          <span 
+            className={styles.dropdownTrigger}
+            onMouseEnter={e => toggleDropdownMenu(true)}
+            onMouseLeave={e => toggleDropdownMenu(false)}
+          >
             TODAS AS CATEGORIAS <MdOutlineArrowBackIosNew size={13}/>
             <section className={styles.dropdownMenu}>
               <ul>
