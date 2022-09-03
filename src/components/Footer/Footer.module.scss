@@ -1,0 +1,31 @@
+.footer{
+  width: 100%;
+  padding: 2rem 3rem;
+  background-color: rgb(var(--theme-color));
+  color: rgb(var(--white));
+
+  &>main{
+    display: flex;
+
+    &>div{
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+
+      h4{
+        font-size: 0.95rem;
+        margin: 0.3rem 0;
+      }
+
+      a:hover{
+        filter: brightness(0.85);
+      }
+    }
+  }
+}
+
+.socialMediaContainer{
+  display: flex;
+  gap: 0.4rem;
+}
