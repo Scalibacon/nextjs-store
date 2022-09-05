@@ -14,6 +14,7 @@ import { useRouter } from "next/router";
 import Product from "../../types/Product";
 import MOCKED_PRODUCTS from '../../utils/MOCKED_PRODUCTS.json';
 import Footer from "../../components/Footer";
+import Head from "next/head";
 
 type ProductProps = {
   product: Product
@@ -44,6 +45,10 @@ const Product: NextPage<ProductProps> = ({
 
   return (
     <>
+      <Head>
+        <title>{ product.name }</title>
+      </Head>
+
       <Header />
       <div className={styles.productContainer} id="pageMain">
         <section className={styles.infoContainer}>

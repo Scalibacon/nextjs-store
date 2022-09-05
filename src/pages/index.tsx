@@ -28,11 +28,6 @@ const Home: NextPage<HomePageProps> = ({
 }: HomePageProps) => {
   return (
     <>
-      <Head>
-        <title>ScaliLoja</title>
-        <link rel="shortcut icon" href="./favicon.ico" />
-      </Head>
-
       <Header />
 
       <section id="pageMain">
