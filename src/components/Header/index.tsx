@@ -16,8 +16,8 @@ const Header = () => {
   const [categories, setCategories] = useState<Category[]>([]);
 
   useEffect( () => {
-    async function fetchCategories(){
-      const response = await fetch('http://localhost:3000/api/category');
+    async function fetchCategories(){      
+      const response = await fetch(`${location.origin}/api/category`);
       const { categories }  = await response.json();
       
       setCategories( oldArray => categories);
