@@ -4,13 +4,17 @@ import styles from './Footer.module.scss';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-
+      <header></header>
       <main>
         <div>
           <h4>Institucional</h4>
           <a>Sobre a ScaliLoja</a>
           <a>Política de Privacidade</a>
+          <a>Política de Pagamento</a>
           <a>Trabalhe Conosco</a>
+        </div>
+
+        <div>
           <h4>Mídias Sociais</h4>
           <div className={styles.socialMediaContainer}>
             <a><AiFillGithub size={25} /></a>
