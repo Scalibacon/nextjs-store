@@ -46,7 +46,7 @@ const Product: NextPage<ProductProps> = ({
   return (
     <>
       <Head>
-        <title>{ product.name }</title>
+        <title>{product.name}</title>
       </Head>
 
       <Header />
@@ -64,7 +64,7 @@ const Product: NextPage<ProductProps> = ({
               <header>
                 <span>MARCA</span>
                 <span>
-                  <StarRank size={15} textBelow={false} />
+                  <StarRank rating={product.rating} ratingCount={product.ratingCount} size={15} textBelow={false} />
                 </span>
                 <span>
                   <FiShare2 size={25} />
@@ -75,17 +75,22 @@ const Product: NextPage<ProductProps> = ({
             </section>
 
             <section className={styles.shoppingSection}>
-              <div className={styles.discountContainer}>
-                <span>
-                  <p><TbDiscount2 size={35} /></p>
-                  <b>25% OFF</b>
-                </span>
+              {product.finalPrice < product.price && 
+                <div className={styles.discountContainer}>
+                  <span>
+                    <p><TbDiscount2 size={35} /></p>
+                    <b>
+                      { Math.floor((product.price - product.finalPrice) / product.price * 100) }%
+                      OFF
+                    </b>
+                  </span>
 
-                <span>
-                  <p><IoMdStopwatch size={35} /></p>
-                  <b>21D 12:50:37</b>
-                </span>
-              </div>
+                  <span>
+                    <p><IoMdStopwatch size={35} /></p>
+                    <b>21D 12:50:37</b>
+                  </span>
+                </div>
+              }
 
               <p>
                 Vendido e entregue por:
@@ -93,10 +98,12 @@ const Product: NextPage<ProductProps> = ({
                 |
                 <span className={styles.stock}><b> Em estoque</b></span>
               </p>
-              <p className={styles.oldPrice}>R$ 4.399,00</p>
+              {product.finalPrice < product.price && 
+                <p className={styles.oldPrice}>{product.price.toLocaleString('pt-br', { style: 'currency', 'currency': 'BRL' })}</p>                 
+              }
               <div className={styles.price}>
                 <span>
-                  <p>{product.price.toLocaleString('pt-br', { style: 'currency', 'currency': 'BRL' })}</p>
+                  <p>{product.finalPrice.toLocaleString('pt-br', { style: 'currency', 'currency': 'BRL' })}</p>
                   <small>À vista ou no PIX</small>
                 </span>
                 <BuyButton />

@@ -101,14 +101,13 @@ const Home: NextPage<HomePageProps> = ({
         </main>
       </section>
 
-
-
       <Footer />
     </>
   )
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
+  // no build não tem acesso a rota api, então precisa fazer o fetch direto na api
   // const [productsSale, productsHighlighted, productsWanted ] = await Promise.all([
   //   fetch('http://localhost:3000/api/product?special=sale').then(response => response.json()),
   //   fetch('http://localhost:3000/api/product?special=highlight').then(response => response.json()),
@@ -116,14 +115,19 @@ export const getStaticProps: GetStaticProps = async (context) => {
   // ]);
 
   let products: Product[] = [];
+  let productsSale: Product[] = [];
 
   for (let i = 0; i < 5; i++) {
     products = [...products, ...MOCKED_PRODUCTS];
+
+    const filteredProductsSale = MOCKED_PRODUCTS.filter( (product: Product) => product.finalPrice < product.price);
+
+    productsSale = [...productsSale, ...filteredProductsSale];
   }
 
   return {
     props: {
-      productsSale: products,
+      productsSale: productsSale,
       productsHighlighted: products,
       productsWanted: products
     }
