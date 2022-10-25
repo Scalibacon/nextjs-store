@@ -1,5 +1,4 @@
 import { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
 import { IoMdStopwatch } from "react-icons/io";
 import { BsFillLightningChargeFill, BsFillStarFill } from "react-icons/bs";
 import { AiOutlineAim } from "react-icons/ai";

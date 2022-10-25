@@ -70,7 +70,7 @@ const Header = () => {
         <div className={styles.iconsContainer}>
           <a><BsFillChatSquareQuoteFill size={20}/></a>
           <a><BsFillHeartFill size={20}/></a>
-          <a className={styles.showInSmall}><FaShoppingCart size={20}/></a>
+          <Link href='/cart'><a className={styles.showInSmall}><FaShoppingCart size={20}/></a></Link>
         </div>
 
         <span className={styles.rightHamburger}>
